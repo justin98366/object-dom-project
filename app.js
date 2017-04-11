@@ -3,6 +3,9 @@ var storeHours = ['6am', '7am', '8am', '9am' , '10am', '11am', '12pm', '1pm', '2
 var counter = 0;
 var pikeStore = document.getElementById('andPike');
 var seaTacStore = document.getElementById('seaTac');
+var seaCentStore = document.getElementById('seattleCenter');
+var capHillStore = document.getElementById('capitolHill');
+var alkiStore = document.getElementById('alki');
 
 var pikeLoc = {
   minCust: 23,
@@ -39,9 +42,13 @@ var seatacLoc = {
     return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust);
   },
   storeCalc: function(){
-    for (var i = 0; i < 16; i++){
+    for (var i = 0; i < 15; i++){
       var averageCalc = Math.round(this.avCookie * this.rndCust());
       this.results.push(averageCalc);
+      var liEl = document.createElement('li');
+      liEl.textContent = storeHours[i] + ': ' + seatacLoc.results[i] + ' cookies.';
+
+      seaTacStore.appendChild(liEl);
     }
 
   },
@@ -56,9 +63,13 @@ var seaCentLoc = {
     return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust);
   },
   storeCalc: function(){
-    for (var i = 0; i < 16; i++){
+    for (var i = 0; i < 15; i++){
       var averageCalc = Math.round(this.avCookie * this.rndCust());
       this.results.push(averageCalc);
+      var liEl = document.createElement('li');
+      liEl.textContent = storeHours[i] + ': ' + seaCentLoc.results[i] + ' cookies.';
+
+      seaCentStore.appendChild(liEl);
     }
 
   },
@@ -73,9 +84,13 @@ var capHillLoc = {
     return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust)
   },
   storeCalc: function(){
-    for (var i = 0; i < 16; i++){
+    for (var i = 0; i < 15; i++){
       var averageCalc = Math.round(this.avCookie * this.rndCust());
       this.results.push(averageCalc);
+      var liEl = document.createElement('li');
+      liEl.textContent = storeHours[i] + ': ' + capHillLoc.results[i] + ' cookies.';
+
+      capHillStore.appendChild(liEl);
     }
 
   },
@@ -90,12 +105,20 @@ var alkiLoc = {
     return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust)
   },
   storeCalc: function(){
-    for (var i = 0; i < 16; i++){
+    for (var i = 0; i < 15; i++){
       var averageCalc = Math.round(this.avCookie * this.rndCust());
       this.results.push(averageCalc);
+      var liEl = document.createElement('li');
+      liEl.textContent = storeHours[i] + ': ' + alkiLoc.results[i] + ' cookies.';
+
+      alkiStore.appendChild(liEl);
     }
 
   },
 };
 
 pikeLoc.storeCalc();
+seatacLoc.storeCalc();
+seaCentLoc.storeCalc();
+capHillLoc.storeCalc();
+alkiLoc.storeCalc();
