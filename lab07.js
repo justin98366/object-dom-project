@@ -8,7 +8,6 @@ function StoreCalculation(name, mincust, maxcust, avcook){
   this.results = [];
   this.total = 0;
   this.time = ['6am', '7am', '8am', '9am' , '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
- //this.ave = Math.floor((Math.random() * (this.maxcust - this.mincust + 1))+this.mincust);
 
 }
 
@@ -22,9 +21,7 @@ StoreCalculation.prototype.storeMath = function(){
     var averageCalc = Math.round(this.avcook * this.avCust());
     this.results.push(averageCalc);
     this.total += this.results[i];
-    //console.log (this.results);
 
-    //table.appendChild(itemRow);
   }
   console.log (this.results);
   console.log(this.total);
@@ -51,7 +48,6 @@ StoreCalculation.prototype.storeTable = function () {
 
   var itemRow, itemTime, cookiesSold, itemTotalName, itemTotalData, itemData;
 
-  // create a new row for each item and add it to the table
   for(var i = 0; i < this.time.length; i++){
     itemRow = document.createElement('tr');
     itemData = document.createElement('td');
@@ -59,10 +55,8 @@ StoreCalculation.prototype.storeTable = function () {
     itemTime.textContent = this.time[i];
     cookiesSold = document.createElement('td');
     cookiesSold.textContent = this.results[i];
-
     itemTotalName = document.createElement('td');
     itemTotalData = document.createElement('td');
-
     itemRow.appendChild(itemTime);
     itemRow.appendChild(cookiesSold);
     table.appendChild(itemRow);
@@ -70,9 +64,7 @@ StoreCalculation.prototype.storeTable = function () {
   }
 
   itemTotalData = document.createElement('td');
-
   itemTotalData.textContent = this.total;
-
   itemRow.appendChild(itemTotalData);
 
   return table;
