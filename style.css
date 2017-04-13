@@ -27,9 +27,11 @@ body{
   height: 20%;
   background-color: black;
   text-align: center;
+}
 
-
-
+#title {
+  color: black;
+  text-align: center;
 
 }
 
@@ -65,7 +67,7 @@ img {
 }
 
 #bottom-ten{
-  width: 100%;
+  width: 50%;
   height: 10%;
   background-color: salmon;
 }
@@ -101,5 +103,6 @@ table, table * {
 }
 
 #app {
+  width: 50%
 
 }
