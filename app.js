@@ -13,7 +13,7 @@ var pikeLoc = {
   avCookie: 6.3,
   results: [],
   rndCust: function() {
-    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
 
   },
 
@@ -26,17 +26,15 @@ var pikeLoc = {
       liEl.textContent = storeHours[i] + ': ' + pikeLoc.results[i] + ' cookies.';
       pikeStore.appendChild(liEl);
       //var counter = pikeLoc.results[i] + pikeLoc.results[0];
-      counter += pikeLoc.results[i]
+      counter += pikeLoc.results[i];
       var totCook = document.createElement('li');
       totCook.textContent = 'Total cookies: ' + counter;
-
 
     }
     console.log(counter);
     pikeStore.appendChild(totCook);
 
   },
-
 
 };
 
@@ -46,7 +44,7 @@ var seatacLoc = {
   avCookie: 1.2,
   results: [],
   rndCust: function(){
-    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
   },
   storeCalc: function(){
     var counter = 0;
@@ -56,7 +54,7 @@ var seatacLoc = {
       var liEl = document.createElement('li');
       liEl.textContent = storeHours[i] + ': ' + seatacLoc.results[i] + ' cookies.';
       seaTacStore.appendChild(liEl);
-      counter += seatacLoc.results[i]
+      counter += seatacLoc.results[i];
       var totCook = document.createElement('li');
       totCook.textContent = 'Total cookies: ' + counter;
     }
@@ -72,7 +70,7 @@ var seaCentLoc = {
   avCookie: 3.7,
   results:[],
   rndCust: function(){
-    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust);
+    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
   },
   storeCalc: function(){
     var counter = 0;
@@ -82,7 +80,7 @@ var seaCentLoc = {
       var liEl = document.createElement('li');
       liEl.textContent = storeHours[i] + ': ' + seaCentLoc.results[i] + ' cookies.';
       seaCentStore.appendChild(liEl);
-      counter += seaCentLoc.results[i]
+      counter += seaCentLoc.results[i];
       var totCook = document.createElement('li');
       totCook.textContent = 'Total cookies: ' + counter;
     }
@@ -98,7 +96,7 @@ var capHillLoc = {
   avCookie: 2.3,
   results: [],
   rndCust: function(){
-    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust)
+    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
   },
   storeCalc: function(){
     var counter = 0;
@@ -108,7 +106,7 @@ var capHillLoc = {
       var liEl = document.createElement('li');
       liEl.textContent = storeHours[i] + ': ' + capHillLoc.results[i] + ' cookies.';
       capHillStore.appendChild(liEl);
-      counter += capHillLoc.results[i]
+      counter += capHillLoc.results[i];
       var totCook = document.createElement('li');
       totCook.textContent = 'Total cookies: ' + counter;
     }
@@ -124,7 +122,7 @@ var alkiLoc = {
   avCookie:4.6,
   results: [],
   rndCust: function(){
-    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1))+this.minCust)
+    return Math.floor((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
   },
   storeCalc: function(){
     var counter = 0;
@@ -134,13 +132,12 @@ var alkiLoc = {
       var liEl = document.createElement('li');
       liEl.textContent = storeHours[i] + ': ' + alkiLoc.results[i] + ' cookies.';
       alkiStore.appendChild(liEl);
-      counter += alkiLoc.results[i]
+      counter += alkiLoc.results[i];
       var totCook = document.createElement('li');
       totCook.textContent = 'Total cookies: ' + counter;
     }
     console.log(counter);
     alkiStore.appendChild(totCook);
-
   },
 };
 

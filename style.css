@@ -76,13 +76,15 @@ img {
   vertical-align: middle;
 }
 
-#storehours{
-  padding: 70px 0;
-  text-align: center;
+#store-hours{
+text-align: center;
 }
 
 #storehours{
   font-size: 40px;
+  padding: 50px 0;
+  margin: auto;
+  text-align: center;
 }
 
 li.index{
