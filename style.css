@@ -33,7 +33,12 @@ body{
 
 }
 
-h1 {
+#title-page {
+  color: black;
+  text-align: center;
+}
+
+#title {
   color: white;
   font-family: 'Spirax', serif;
   vertical-align: middle;
