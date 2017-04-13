@@ -58,23 +58,58 @@ StoreCalculation.prototype.storeTable = function () {
   return table;
 };
 
-var app = document.getElementById('app');
+var table = document.getElementById('table');
 var pikeStore = new StoreCalculation ('1st and Pike', 23, 65, 6.3);
   pikeStore.storeMath();
-  app.appendChild(pikeStore.storeTable());
+  table.appendChild(pikeStore.storeTable());
 
 var seaTacStore = new StoreCalculation ('SeaTac', 3, 24, 1.2);
   seaTacStore.storeMath();
-  app.appendChild(seaTacStore.storeTable());
+  table.appendChild(seaTacStore.storeTable());
 
 var seaCentStore = new StoreCalculation ('Central Seattle', 11, 38, 3.7);
   seaCentStore.storeMath();
-  app.appendChild(seaCentStore.storeTable());
+  table.appendChild(seaCentStore.storeTable());
 
 var capHillStore = new StoreCalculation ('Capitol Hill', 20, 38, 2.3);
   capHillStore.storeMath();
-  app.appendChild(capHillStore.storeTable());
+  table.appendChild(capHillStore.storeTable());
 
 var alkiStore = new StoreCalculation ('Alki Beach', 2, 16, 4.6);
   alkiStore.storeMath();
-  app.appendChild(alkiStore.storeTable());
+  table.appendChild(alkiStore.storeTable());
+
+
+function handleStoreSubmit(event){
+// stop the browser from reloading
+  event.preventDefault();
+  var form = event.target;
+
+  var storeTitle = form.storeName.value;
+  var storeCustMin = form.custMin.value;
+  var storeCustMax = form.custMax.value;
+  var storeCookAvg = form.cookAvg.value;
+
+  form.storeName.value = '';
+  form.custMin.value = '';
+  form.custMax.value = '';
+  form.cookAvg.value = '';
+
+  var newStore = new StoreCalculation (storeTitle, storeCustMin, storeCustMax, storeCookAvg);
+    newStore.storeMath();
+    table.appendChild(newStore.storeTable());
+
+    console.log(handleStoreSubmit);
+}
+
+var storeCreateFrom = document.getElementById('create-store');
+storeCreateFrom.addEventListener('submit', handleStoreSubmit);
+
+
+
+
+
+
+
+
+  //
