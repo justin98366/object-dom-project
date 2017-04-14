@@ -1,13 +1,24 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Hello World</title>
-  </head>
-  <body>
-    <h1 id="title">Example</h1>
-    <ul id="ingredients"></ul>
+<head>
+  <title> Salmon Cookies </title>
+</head>
+<body>
+  <h1 id="title-page">Salmon Cookies Store Data</h1>
+  <div id="table"></div>
+  <form id="create-store">
+    <input name="storeName" type="text" placeholder="store name" />
+    <input name="custMin" type="number" placeholder="minimum customers" />
+    <input name="custMax" type="number" placeholder="maximum customers" />
+    <input name="cookAvg" type="number" placeholder="average cookies sold" />
 
-  </body>
-  <link rel="stylesheet" type="text/css" href="style.css" >
-  <script src="app.js"></script>
+    <button type="submit">Add Store</button>
+  </form>
+  <div id="bottom-ten">
+    <a href="index.html">Home</a>
+  </div>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="lab08.js"> </script>
+</body>
 </html>
