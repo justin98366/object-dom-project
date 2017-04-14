@@ -1,0 +1,111 @@
+.clear-fix{
+  clear: both;
+}
+
+*{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+
+
+body{
+  width: 100%;
+  height: 100%;
+
+}
+
+#top-half{
+  width: 100%;
+  height: 20%;
+  background-color: black;
+  text-align: center;
+}
+
+#title {
+  color: black;
+  text-align: center;
+
+}
+#title-index{
+  color: white;
+  text-align: center;
+}
+h1 {
+  color: white;
+  font-family: 'Spirax', serif;
+  vertical-align: middle;
+  font-size: 60px;
+}
+img {
+  padding: 70px 0;
+  text-align: center;
+}
+
+#bottom-left{
+  display: inline-block;
+  width: 50%;
+  height: 70%;
+  /*float: right;*/
+  background-color: teal;
+  vertical-align: middle;
+  overflow: scroll;
+}
+
+#bottom-right{
+  /*display: inline-block;*/
+  width: 50%;
+  height: 70%;
+  float: right;
+  background-color: purple;
+  vertical-align: middle;
+  overflow: scroll;
+}
+
+#bottom-ten{
+  width: 100%;
+  height: 10%;
+  background-color: salmon;
+}
+
+#picture{
+  vertical-align: middle;
+}
+
+#storehours{
+  padding: 70px 0;
+  text-align: center;
+}
+
+#storehours{
+  font-size: 40px;
+}
+
+li.index{
+  padding: 70px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+#firsthalf{
+  overflow: scroll;
+}
+
+
+table, table * {
+  border: 1px solid black;
+
+  background-color: salmon;
+}
+
+#app {
+  width: 100%
+
+}
